@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import ItemList from './components/ItemList';
+import ItemList from './ItemList'; 
+
 const Catalogo = () => {
   const [cart, setCart] = useState([]);
 
@@ -11,12 +12,13 @@ const Catalogo = () => {
 
   const addToCart = (item) => {
     setCart((prevCart) => [...prevCart, item]);
-    console.log(`${item.name} agregado al carrito`);
+    console.log(`${item.name} agregado al carrito`); 
   };
 
   return (
     <div>
       <h2>Catálogo de Productos</h2>
+      {}
       <ItemList items={items} addToCart={addToCart} />
     </div>
   );
